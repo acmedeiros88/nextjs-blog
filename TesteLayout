@@ -1,0 +1,84 @@
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+
+
+export default function Home() {
+  return (
+    <Container fluid>
+      <Row className="bg-primary">HEADER</Row>
+      <Row>
+        <Col md={true} className="bg-info">
+          <Navbar expand="md" className="d-md-block">
+            <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+            <Navbar.Toggle aria-controls="nav_sidebar" />
+            <Container className="p-0">
+              <Navbar.Collapse id="nav_sidebar">
+                <Nav activeKey="/" className="flex-column">
+                  <Nav.Item>
+                    <Nav.Link href="/">
+                      <i className="bi bi-house p-2" />
+                      Home
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link href="/">
+                      <i className="bi bi-file-earmark-ruled p-2" />
+                      Pedido
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link href="/">
+                      <i className="bi bi-card-list p-2" />
+                      Estoque
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link href="/">
+                      <i class="bi bi-shop p-2" />
+                      Venda
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link href="/">
+                      <i class="bi bi-people p-2" />
+                      Cliente
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link href="/">
+                      <i class="bi bi-book p-2" />
+                      Receita
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link href="/">
+                      <i className="bi bi-bar-chart p-2" />
+                      Histórico
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link href="/">
+                      <i className="bi bi-layers-half p-2" />
+                      Balanço
+                    </Nav.Link>
+                  </Nav.Item>
+                  <Nav.Item>
+                    <Nav.Link href="/">
+                      <i className="bi bi-x-square p-2" />
+                      Sair
+                    </Nav.Link>
+                  </Nav.Item>
+                </Nav>
+              </Navbar.Collapse>
+            </Container>
+          </Navbar>
+        </Col>
+        <Col md={9} className="bg-success">MAIN</Col>
+      </Row>
+      <Row className="bg-secondary">FOOTER</Row>
+    </Container>
+  )
+}
